@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkListStore" id="liststore1">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">3x3</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">4x4</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">5x5</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">6x6</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">7x7</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">8x8</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">9x9</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">10x10</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">11x11</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">12x12</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">13x13</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">14x14</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">15x15</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">random</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkListStore" id="liststore2">
+    <columns>
+      <!-- column-name gchararray1 -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">azul</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">verde</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">rojo</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">marron</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">negro</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">naranja</col>
+      </row>
+    </data>
+  </object>
+  <object class="GtkWindow" id="ventana2">
+    <property name="can_focus">False</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed2">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkRadioButton" id="iniciaElJugador">
+            <property name="label" translatable="yes">inicia el jugador</property>
+            <property name="width_request">150</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <signal name="toggled" handler="on_inicia el jugador_toggled" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">25</property>
+            <property name="y">50</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkRadioButton" id="iniciaLaCpu">
+            <property name="label" translatable="yes">inicia la cpu</property>
+            <property name="width_request">150</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="group">iniciaElJugador</property>
+            <signal name="toggled" handler="on_iniciaLaCpu_toggled" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">25</property>
+            <property name="y">75</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkRadioButton" id="iniciaRandom">
+            <property name="label" translatable="yes">random</property>
+            <property name="width_request">150</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="group">iniciaElJugador</property>
+            <signal name="toggled" handler="on_iniciaRandom_toggled" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">25</property>
+            <property name="y">100</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="quienInicia">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">seleccione quien empieza la partida </property>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">20</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="volverAPrincipal">
+            <property name="label" translatable="yes">volver</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_volverAPrincipal_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">350</property>
+            <property name="y">250</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="textoTam">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">cual sera el tamaño del tablero</property>
+          </object>
+          <packing>
+            <property name="x">20</property>
+            <property name="y">150</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="selectSize">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="model">liststore1</property>
+            <property name="has_entry">True</property>
+            <property name="entry_text_column">0</property>
+            <child internal-child="entry">
+              <object class="GtkEntry" id="entradaT">
+                <property name="can_focus">False</property>
+                <property name="text" translatable="yes">3x3</property>
+                <signal name="changed" handler="on_entrada_changed" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">25</property>
+            <property name="y">200</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="textCYN">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">color y nombre del jugador</property>
+          </object>
+          <packing>
+            <property name="x">250</property>
+            <property name="y">20</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="nombreJugador">
+            <property name="width_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">alejandro</property>
+            <signal name="changed" handler="on_nombreJugador_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">275</property>
+            <property name="y">90</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="cpuCYN">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">color y nombre de la cpu</property>
+          </object>
+          <packing>
+            <property name="x">250</property>
+            <property name="y">130</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkEntry" id="nombreCpu">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">CPU</property>
+            <signal name="changed" handler="on_nombreCpu_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">275</property>
+            <property name="y">200</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="colJugador">
+            <property name="width_request">50</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="model">liststore2</property>
+            <property name="has_entry">True</property>
+            <property name="entry_text_column">0</property>
+            <child internal-child="entry">
+              <object class="GtkEntry" id="entradaCJ">
+                <property name="can_focus">True</property>
+                <property name="text" translatable="yes">rojo</property>
+                <signal name="changed" handler="on_entradaCC_changed" swapped="no"/>
+                <signal name="changed" handler="on_entradaCJ_changed" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">275</property>
+            <property name="y">50</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBox" id="colCpu">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="model">liststore2</property>
+            <property name="has_entry">True</property>
+            <property name="entry_text_column">0</property>
+            <child internal-child="entry">
+              <object class="GtkEntry" id="entradaCC">
+                <property name="can_focus">True</property>
+                <property name="text" translatable="yes">azul</property>
+                <signal name="changed" handler="on_entradaCC_changed" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">275</property>
+            <property name="y">160</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="ventana">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Mi Tablero de Juego</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkBox" id="box1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkMenuBar" id="menubar1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkMenuItem" id="menuitem1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">_Archivo</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem1">
+                        <property name="label">gtk-new</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem2">
+                        <property name="label">gtk-open</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem3">
+                        <property name="label">gtk-save</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem4">
+                        <property name="label">gtk-save-as</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="separatormenuitem1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem5">
+                        <property name="label">gtk-quit</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">_Editar</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem6">
+                        <property name="label">gtk-cut</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem7">
+                        <property name="label">gtk-copy</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem8">
+                        <property name="label">gtk-paste</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem9">
+                        <property name="label">gtk-delete</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">_Ver</property>
+                <property name="use_underline">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem4">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Ay_uda</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu3">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="imagemenuitem10">
+                        <property name="label">gtk-about</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator" id="separator1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="box2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkBox" id="box_izquierda">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
+                <property name="homogeneous">True</property>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <object class="GtkBox" id="box_tablero">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_inferior">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">label</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="box3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkLabel" id="label_turno">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">label</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_estado">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">label</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStatusbar" id="statusbar1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_left">10</property>
+            <property name="margin_right">10</property>
+            <property name="margin_start">10</property>
+            <property name="margin_end">10</property>
+            <property name="margin_top">6</property>
+            <property name="margin_bottom">6</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">2</property>
+            <property name="homogeneous">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="ventana1">
+    <property name="width_request">600</property>
+    <property name="height_request">425</property>
+    <property name="can_focus">False</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="salir">
+            <property name="label" translatable="yes">salir</property>
+            <property name="width_request">300</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">salir del programa</property>
+            <signal name="clicked" handler="on_salir_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">250</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="acerca">
+            <property name="label" translatable="yes">acerca del juego</property>
+            <property name="width_request">300</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">el creador</property>
+            <signal name="clicked" handler="on_acerca_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">200</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="configuracion">
+            <property name="label" translatable="yes">configuracion</property>
+            <property name="width_request">300</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">nombre de los 2 jugadores, quien inicia, su color , dimencion de tablero</property>
+            <signal name="clicked" handler="on_configuracion_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">150</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="jugar">
+            <property name="label" translatable="yes">jugar</property>
+            <property name="width_request">300</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">dependiendo de la opcion seleccionada empieza partida 
+p vs c o
+ c vs c</property>
+            <signal name="clicked" handler="on_jugar_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">100</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="ventana3">
+    <property name="can_focus">False</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed3">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="creador">
+            <property name="width_request">300</property>
+            <property name="height_request">180</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Creador:
+
+Alejandro Sarubbi</property>
+            <attributes>
+              <attribute name="size" value="12500"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">74</property>
+            <property name="y">21</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="volverAPrincipal2">
+            <property name="label" translatable="yes">volver</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_volverAPrincipal2_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">350</property>
+            <property name="y">200</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
